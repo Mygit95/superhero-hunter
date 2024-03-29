@@ -8,8 +8,8 @@ function getQueryParam(name) {
 
 function fetchData() {
   const characterId = getQueryParam('characterId');
-  
-  const characterUrl = `http://gateway.marvel.com/v1/public/characters/${characterId}?ts=${ts}&apikey=${publicKey}&hash=${hashValue}`;
+
+  const characterUrl = `https://gateway.marvel.com/v1/public/characters/${characterId}?ts=${ts}&apikey=${publicKey}&hash=${hashValue}`;
 
   const reqCharDetails = fetch(characterUrl);
 

@@ -21,10 +21,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // Function to fetch character data
 async function fetchCharacterData(query) {
 
-  let characterUrl = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashValue}`;
+  let characterUrl = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashValue}`;
 
   if(query.length > 0) {
-    characterUrl = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashValue}&nameStartsWith=${query}`;
+    characterUrl = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashValue}&nameStartsWith=${query}`;
   }
 
   const requestCharacters = fetch(characterUrl);
