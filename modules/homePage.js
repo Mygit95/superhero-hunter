@@ -133,5 +133,10 @@ function getFavorites() {
 }
 
 //This is to cache the query text
-const queryText =  JSON.parse(localStorage.getItem("query")).trim();
+const getQuery = localStorage.getItem("query");
+let queryText = "";
+if(getQuery) {
+  queryText = JSON.parse(getQuery).trim()
+}
+
 fetchCharacterData(queryText);
